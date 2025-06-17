@@ -1,0 +1,282 @@
+:root {
+    --sky-blue: #4A90E2;
+    --light-blue: #87CEEB;
+    --white: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/airplane-bg.jpg') center/cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.study-guide {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    color: var(--white);
+    transform: translateY(0);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.study-guide:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.study-guide ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.study-guide li {
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.study-guide li:hover {
+    transform: translateX(10px);
+}
+
+.goals-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.goals-table th, .goals-table td {
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    color: var(--white);
+    transition: background 0.3s ease;
+}
+
+.goals-table th {
+    background: rgba(74, 144, 226, 0.3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.goals-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.goals-table tr:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 16px;
+    color: var(--white);
+    transform: translateY(0);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.note {
+    font-style: italic;
+    color: var(--white);
+    margin-top: 1rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+
+.floating-plane {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background: url('../assets/images/plane-icon.png') no-repeat center/contain;
+    opacity: 0.15;
+    pointer-events: none;
+    animation: float 20s linear infinite;
+    filter: brightness(1.2) contrast(1.1);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-100vw, 100vh) rotate(0deg);
+    }
+    100% {
+        transform: translate(100vw, -100vh) rotate(360deg);
+    }
+}
+
+/* Loading Animation */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--sky-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--sky-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .goals-table {
+        font-size: 0.9rem;
+    }
+    
+    .goals-table th, .goals-table td {
+        padding: 0.8rem;
+    }
+
+    .header {
+        padding: 1rem 0;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .header, .study-guide, .goals-table, .contact-info {
+        background: white;
+        color: black;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .floating-plane {
+        display: none;
+    }
+} 

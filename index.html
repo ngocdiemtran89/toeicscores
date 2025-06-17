@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORI TOEIC - Chuyên Gia Tiếng Anh Hàng Không</title>
+    <style>
+        :root {
+            --sky-blue: #1E90FF;
+            --dark-sky-blue: #0066CC;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #E0E0E0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .study-guide {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            color: #E0E0E0;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .study-guide:hover {
+            transform: translateY(-5px);
+            background: rgba(13, 17, 23, 0.9);
+        }
+
+        .study-guide ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .study-guide li {
+            margin-bottom: 0.5rem;
+        }
+
+        .goals-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .goals-table th, .goals-table td {
+            padding: 1.2rem;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            color: #E0E0E0;
+        }
+
+        .goals-table th {
+            background: rgba(30, 144, 255, 0.2);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .goals-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .goals-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.3s ease;
+        }
+
+        .contact-info {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-radius: 16px;
+            color: #E0E0E0;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            background: rgba(13, 17, 23, 0.9);
+        }
+
+        .note {
+            font-style: italic;
+            color: #E0E0E0;
+            margin-top: 1rem;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #E0E0E0;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+        }
+
+        .floating-plane {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            background: url('https://cdn-icons-png.flaticon.com/512/3212/3212567.png') no-repeat center/contain;
+            opacity: 0.1;
+            pointer-events: none;
+            animation: float 20s linear infinite;
+            filter: brightness(0.8) contrast(1.2);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-100vw, 100vh) rotate(0deg);
+            }
+            100% {
+                transform: translate(100vw, -100vh) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .goals-table {
+                font-size: 0.9rem;
+            }
+            
+            .goals-table th, .goals-table td {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-plane"></div>
+    <header class="header">
+        <h1>ORI TOEIC</h1>
+        <p class="slogan">Chuyên Gia Tiếng Anh Hàng Không từ năm 2013</p>
+    </header>
+
+    <div class="container">
+        <div class="study-guide">
+            <h2>Hướng Dẫn Học Tập</h2>
+            <ul>
+                <li>Sau khóa Pre: Học viên thường đạt 300-350 điểm</li>
+                <li>Tốc độ tiến bộ: 50 điểm/tháng (3 buổi/tuần) hoặc 100 điểm/tháng (6 buổi/tuần)</li>
+                <li>Tập trung học từng Part một trước khi chuyển sang Part tiếp theo</li>
+                <li>Luyện tập trên ngân hàng đề thi tại study4.com</li>
+                <li>Luyện tập đều đặn 2-4 tuần là chìa khóa để thấy sự tiến bộ</li>
+            </ul>
+        </div>
+
+        <h2>Mục Tiêu Điểm TOEIC Theo Từng Phần</h2>
+        <table class="goals-table">
+            <thead>
+                <tr>
+                    <th>Mục Tiêu</th>
+                    <th>Reading</th>
+                    <th>P5</th>
+                    <th>P6</th>
+                    <th>P7</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500+</td>
+                    <td>53/100</td>
+                    <td>16/30</td>
+                    <td>6/16</td>
+                    <td>31/54</td>
+                </tr>
+                <tr>
+                    <td>600+</td>
+                    <td>63/100</td>
+                    <td>20/30</td>
+                    <td>8/16</td>
+                    <td>35/54</td>
+                </tr>
+                <tr>
+                    <td>700+</td>
+                    <td>73/100</td>
+                    <td>23/30</td>
+                    <td>10/16</td>
+                    <td>40/54</td>
+                </tr>
+                <tr>
+                    <td>800+</td>
+                    <td>83/100</td>
+                    <td>25/30</td>
+                    <td>12/16</td>
+                    <td>46/54</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="goals-table">
+            <thead>
+                <tr>
+                    <th>Mục Tiêu</th>
+                    <th>Listening</th>
+                    <th>P1</th>
+                    <th>P2</th>
+                    <th>P3</th>
+                    <th>P4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>500+</td>
+                    <td>53/100</td>
+                    <td>4/6</td>
+                    <td>13/25</td>
+                    <td>14/39</td>
+                    <td>12/30</td>
+                </tr>
+                <tr>
+                    <td>600+</td>
+                    <td>63/100</td>
+                    <td>4/6</td>
+                    <td>18/25</td>
+                    <td>26/39</td>
+                    <td>15/30</td>
+                </tr>
+                <tr>
+                    <td>700+</td>
+                    <td>73/100</td>
+                    <td>5/6</td>
+                    <td>18/25</td>
+                    <td>28/39</td>
+                    <td>22/30</td>
+                </tr>
+                <tr>
+                    <td>800+</td>
+                    <td>83/100</td>
+                    <td>5/6</td>
+                    <td>23/25</td>
+                    <td>30/39</td>
+                    <td>25/30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="contact-info">
+            <h3>Cần Hỗ Trợ?</h3>
+            <p>Liên hệ qua Zalo: 0906 303 373</p>
+            <p>Chúng tôi sẽ phản hồi trong ngày hoặc cuối tuần tùy theo khối lượng công việc.</p>
+        </div>
+
+        <p class="note">Lưu ý: Mục tiêu cho từng phần có thể thay đổi tùy theo sở thích và thế mạnh của học viên.</p>
+    </div>
+</body>
+</html> 

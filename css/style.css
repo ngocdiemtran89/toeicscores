@@ -1,0 +1,270 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+header h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slogan {
+    color: white;
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Study Guide Section */
+.study-guide {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.study-guide h2 {
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.guide-item {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.guide-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+.guide-item i {
+    font-size: 2em;
+    color: #ff1493;
+    min-width: 40px;
+    text-align: center;
+}
+
+.guide-item p {
+    margin: 0;
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.guide-item p + p {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Targets Section */
+.targets-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.targets-section h2 {
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.target-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff5f5;
+    border-radius: 10px;
+}
+
+.target-group h3 {
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.1);
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.target-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.target-card:hover {
+    transform: translateY(-5px);
+}
+
+.target-card h4 {
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff5f5;
+}
+
+.target-card ul {
+    list-style: none;
+}
+
+.target-card li {
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #fff5f5;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.target-card li:hover {
+    background: #ffe5e5;
+    transform: scale(1.02);
+}
+
+/* Note Section */
+.note-section {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.note {
+    color: #666;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* Hotline */
+.hotline {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #ff1493;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hotline:hover {
+    transform: scale(1.05);
+}
+
+.hotline i {
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .target-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hotline {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+    }
+
+    .target-group {
+        padding: 15px;
+    }
+
+    .target-card {
+        padding: 15px;
+    }
+
+    .target-card li {
+        padding: 10px;
+    }
+} 

@@ -1,71 +1,31 @@
-# ORI TOEIC - Trang Web Hướng Dẫn Luyện Thi TOEIC
+# ORI TOEIC - Bảng Mục Tiêu TOEIC
 
-Đây là trang web hướng dẫn luyện thi TOEIC với giao diện hiện đại và tương tác, được thiết kế để giúp người học có cái nhìn tổng quan về mục tiêu điểm số và phương pháp học tập hiệu quả.
+Website hiển thị bảng mục tiêu TOEIC theo từng Part, giúp học viên định hướng học tập và theo dõi tiến độ.
 
-## Tính Năng
+## Tính năng
 
-- 🎯 Bảng mục tiêu điểm số TOEIC chi tiết
-- 📚 Hướng dẫn học tập từng bước
-- ✈️ Giao diện hàng không với hiệu ứng kính (glass morphism)
-- 📱 Thiết kế responsive cho mọi thiết bị
-- 🎨 Hiệu ứng tương tác và animation mượt mà
-- 🖨️ Chức năng in trang
+- Hiển thị mục tiêu chi tiết cho từng level TOEIC (450+ đến 850+)
+- Hướng dẫn cách học hiệu quả
+- Giao diện thân thiện, dễ sử dụng
+- Responsive trên mọi thiết bị
 
-## Công Nghệ Sử Dụng
+## Công nghệ sử dụng
 
 - HTML5
-- CSS3 (Flexbox, Grid, Animations)
-- JavaScript (ES6+)
-- Intersection Observer API
-- CSS Variables
-- Modern CSS Features (backdrop-filter, etc.)
+- CSS3
+- Font Awesome Icons
+- Google Fonts (Roboto)
 
-## Cài Đặt
+## Cài đặt
 
 1. Clone repository:
 ```bash
-git clone https://github.com/ngocdiemtran89/toeicscores.git
+git clone [repository-url]
 ```
 
 2. Mở file `index.html` trong trình duyệt web
 
-## Cấu Trúc Thư Mục
+## Liên hệ
 
-```
-toeicscores/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-├── assets/
-│   └── images/
-│       ├── airplane-bg.jpg
-│       └── plane-icon.png
-└── README.md
-```
-
-## Tính Năng Tương Tác
-
-- Hiệu ứng đếm số cho điểm TOEIC
-- Nút cuộn lên đầu trang
-- Hiệu ứng gõ chữ cho slogan
-- Hiệu ứng hover cho các phần tử
-- Hiệu ứng parallax cho header
-- Máy bay bay ngẫu nhiên trong nền
-- Chức năng in trang
-
-## Responsive Design
-
-Trang web được thiết kế để hoạt động tốt trên mọi kích thước màn hình:
-- Desktop (> 1200px)
-- Tablet (768px - 1199px)
-- Mobile (< 767px)
-
-## Tác Giả
-
-Ngoc Diem Tran
-
-## Giấy Phép
-
-MIT License 
+- Hotline: 0906 303 373
+- Zalo: 0906 303 373 

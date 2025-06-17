@@ -6,12 +6,12 @@
     <title>ORI TOEIC - Chuyên Gia Tiếng Anh Hàng Không</title>
     <style>
         :root {
-            --sky-blue: #1E90FF;
-            --dark-sky-blue: #0066CC;
+            --sky-blue: #4A90E2;
+            --light-blue: #87CEEB;
             --white: #FFFFFF;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            --glass-bg: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
         }
 
         * {
@@ -22,7 +22,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             color: #333;
@@ -39,7 +39,7 @@
         }
 
         .header {
-            background: rgba(13, 17, 23, 0.8);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
@@ -58,8 +58,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-            opacity: 0.15;
+            background: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            opacity: 0.2;
             z-index: -1;
         }
 
@@ -67,8 +67,8 @@
             font-size: 1.2rem;
             margin-top: 0.5rem;
             font-style: italic;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            color: #E0E0E0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: var(--white);
         }
 
         .container {
@@ -79,7 +79,7 @@
         }
 
         .study-guide {
-            background: rgba(13, 17, 23, 0.8);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
@@ -87,14 +87,14 @@
             padding: 2rem;
             border-radius: 16px;
             margin-bottom: 2rem;
-            color: #E0E0E0;
+            color: var(--white);
             transform: translateY(0);
             transition: transform 0.3s ease;
         }
 
         .study-guide:hover {
             transform: translateY(-5px);
-            background: rgba(13, 17, 23, 0.9);
+            background: rgba(255, 255, 255, 0.25);
         }
 
         .study-guide ul {
@@ -111,7 +111,7 @@
             border-collapse: separate;
             border-spacing: 0;
             margin: 2rem 0;
-            background: rgba(13, 17, 23, 0.8);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
@@ -124,27 +124,27 @@
             padding: 1.2rem;
             text-align: center;
             border: 1px solid var(--glass-border);
-            color: #E0E0E0;
+            color: var(--white);
         }
 
         .goals-table th {
-            background: rgba(30, 144, 255, 0.2);
+            background: rgba(74, 144, 226, 0.3);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .goals-table tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .goals-table tr:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.15);
             transition: background 0.3s ease;
         }
 
         .contact-info {
-            background: rgba(13, 17, 23, 0.8);
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
@@ -153,28 +153,28 @@
             text-align: center;
             margin-top: 2rem;
             border-radius: 16px;
-            color: #E0E0E0;
+            color: var(--white);
             transform: translateY(0);
             transition: transform 0.3s ease;
         }
 
         .contact-info:hover {
             transform: translateY(-5px);
-            background: rgba(13, 17, 23, 0.9);
+            background: rgba(255, 255, 255, 0.25);
         }
 
         .note {
             font-style: italic;
-            color: #E0E0E0;
+            color: var(--white);
             margin-top: 1rem;
             text-align: center;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            color: #E0E0E0;
+            color: var(--white);
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             font-weight: 600;
         }
 
@@ -183,10 +183,10 @@
             width: 150px;
             height: 150px;
             background: url('https://cdn-icons-png.flaticon.com/512/3212/3212567.png') no-repeat center/contain;
-            opacity: 0.1;
+            opacity: 0.15;
             pointer-events: none;
             animation: float 20s linear infinite;
-            filter: brightness(0.8) contrast(1.2);
+            filter: brightness(1.2) contrast(1.1);
         }
 
         @keyframes float {
